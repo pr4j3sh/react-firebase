@@ -1,3 +1,50 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+body {
+  @apply text-slate-900;
+}
+
+h1 {
+  @apply text-5xl font-black;
+}
+h2 {
+  @apply text-4xl font-extrabold;
+}
+h3 {
+  @apply text-3xl;
+}
+h4 {
+  @apply text-2xl;
+}
+h5 {
+  @apply text-xl;
+}
+h6 {
+  @apply text-lg;
+}
+
+button {
+  @apply py-1.5 px-4 bg-slate-900 text-slate-100 rounded-md font-semibold;
+}
+
+.secondary {
+  @apply bg-slate-100 text-slate-900;
+}
+
+.container {
+  @apply max-w-xl m-auto px-2 md:px-0 my-4 flex flex-col gap-4;
+}
+
+pre {
+  @apply border border-slate-200 p-2 rounded-md my-2;
+}
+
+form {
+  @apply w-full md:w-1/2 flex flex-col gap-2;
+}
+
+input {
+  @apply border border-slate-200 px-2 py-1 rounded-md focus:outline-slate-400 w-full;
+}
