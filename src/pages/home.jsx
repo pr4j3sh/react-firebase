@@ -6,9 +6,9 @@ export default function Home() {
       <article>
         <p className="font-bold">Hey there,</p>
         <p>
-          This is a reactjs + firebase template, with tailwindcss, oauth,
-          email-password authentication and crud operations with firebase
-          firestore.
+          This is a reactjs + firebase template, with react-router-dom,
+          tailwindcss, oauth and email-password authentication, crud operations
+          with firebase firestore, redux state management.
         </p>
       </article>
       <article>
@@ -61,6 +61,14 @@ export default function Home() {
           <li>
             <a href="https://react.dev/" target="_blank">
               ReactJs Documentation
+            </a>
+          </li>
+          <li>
+            <a
+              href="https://reactrouter.com/en/main/start/tutorial"
+              target="_blank"
+            >
+              React Router Documentation
             </a>
           </li>
           <li>

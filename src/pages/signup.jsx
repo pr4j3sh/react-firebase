@@ -1,9 +1,10 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
-import { initialState } from "../lib/utils";
+import { authForm } from "../lib/utils";
 
-export default function Signin() {
-  const [formData, setFormData] = useState(initialState);
+export default function Signup() {
+  const [formData, setFormData] = useState(authForm);
+
   function handleChange(e) {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   }
@@ -15,7 +16,7 @@ export default function Signin() {
   return (
     <section className="flex flex-col items-center gap-4">
       <section className="w-full md:w-1/2">
-        <p className=" font-bold">Sign In to your account.</p>
+        <p className=" font-bold">Create a new account.</p>
       </section>
       <section className="w-full md:w-1/2 flex flex-col gap-2">
         <button>Continue with Google</button>
@@ -37,11 +38,11 @@ export default function Signin() {
           value={formData.password}
           onChange={handleChange}
         />
-        <button type="submit">Sign In</button>
+        <button type="submit">Sign Up</button>
       </form>
       <section className="w-full md:w-1/2">
         <p>
-          Do not have an account? <Link to="/auth/signup">Sign Up</Link>{" "}
+          Already have an account? <Link to="/auth">Sign In</Link>{" "}
         </p>
         <Link to="/">Go to home</Link>
       </section>
