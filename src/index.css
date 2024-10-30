@@ -38,7 +38,7 @@ button {
 }
 
 pre {
-  @apply border border-slate-200 p-2 rounded-md my-2;
+  @apply border border-slate-200 p-2 rounded-md my-2 bg-slate-100;
 }
 
 form {
@@ -47,4 +47,16 @@ form {
 
 input {
   @apply border border-slate-200 px-2 py-1 rounded-md focus:outline-slate-400 w-full;
+}
+
+blockquote {
+  @apply border-l-slate-200 border-l-4 pl-2;
+}
+
+code {
+  @apply text-sm p-0.5 border rounded-md bg-slate-100;
+}
+
+a {
+  @apply underline;
 }

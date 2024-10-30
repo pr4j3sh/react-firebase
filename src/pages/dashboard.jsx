@@ -1,8 +1,8 @@
 export default function Dashboard() {
   return (
-    <>
-      <h1>Dashboard</h1>
-      <button>Click</button>
-    </>
+    <section className="container">
+      <p className="font-bold">Hey user@email.com,</p>
+      <p>Welcome to your Dashboard. Create, edit, delete posts.</p>
+    </section>
   );
 }
