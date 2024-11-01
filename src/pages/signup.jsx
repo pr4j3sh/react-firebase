@@ -1,17 +1,40 @@
+import { createUserWithEmailAndPassword } from "firebase/auth";
 import { useState } from "react";
 import { Link } from "react-router-dom";
-import { authForm } from "../lib/utils";
+import { auth } from "../lib/firebase";
+import WithGoogle from "../components/withGoogle";
 
 export default function Signup() {
-  const [formData, setFormData] = useState(authForm);
+  const values = {
+    email: "",
+    password: "",
+  };
+
+  const [formData, setFormData] = useState(values);
 
   function handleChange(e) {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   }
 
-  function handleSubmit(e) {
+  async function handleSubmit(e) {
     e.preventDefault();
-    console.log(formData);
+    try {
+      console.log(formData);
+
+      const res = await createUserWithEmailAndPassword(
+        auth,
+        formData.email,
+        formData.password,
+      );
+
+      const user = res.user;
+
+      console.log(user);
+
+      setFormData(values);
+    } catch (error) {
+      console.error(error);
+    }
   }
   return (
     <section className="flex flex-col items-center gap-4">
@@ -19,8 +42,7 @@ export default function Signup() {
         <p className=" font-bold">Create a new account.</p>
       </section>
       <section className="w-full md:w-1/2 flex flex-col gap-2">
-        <button>Continue with Google</button>
-        <button>Continue with Github</button>
+        <WithGoogle />
       </section>
       <hr className="w-full md:w-1/2" />
       <form method="post" onSubmit={handleSubmit}>

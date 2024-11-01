@@ -1,46 +1,34 @@
-import { useState } from "react";
-import { postForm } from "../lib/utils";
+import { signOut } from "firebase/auth";
+import Crud from "../components/crud";
+import { auth } from "../lib/firebase";
+import { useDispatch, useSelector } from "react-redux";
+import { resetUser } from "../features/user/userSlice";
 
 export default function Dashboard() {
-  const [formData, setFormData] = useState(postForm);
+  const dispatch = useDispatch();
+  const user = useSelector((state) => state.user);
 
-  function handleChange(e) {
-    setFormData({ ...formData, [e.target.name]: e.target.value });
+  async function handleLogout() {
+    try {
+      await signOut(auth);
+      dispatch(resetUser());
+    } catch (error) {
+      console.error(error);
+    }
   }
-
-  function handleSubmit(e) {
-    e.preventDefault();
-    console.log(formData);
-  }
-
   return (
     <section className="container">
       <article>
-        <p className="font-bold">Hey user@email.com,</p>
-        <p>Welcome to your Dashboard. Create, edit, delete posts.</p>
+        <p className="font-bold">Hey {user?.name || user?.email},</p>
+        <p>Welcome to your Dashboard. Create, read, update and delete data.</p>
       </article>
       <span>
-        <button className="secondary">Logout</button>
+        <button className="secondary" onClick={handleLogout}>
+          Logout
+        </button>
       </span>
-
-      <p className="font-bold">create posts</p>
-      <form method="post" onSubmit={handleSubmit} className="w-full">
-        <input
-          type="text"
-          name="post"
-          placeholder="what's on your mind?"
-          value={formData.post}
-          onChange={handleChange}
-        />
-        <span>
-          <button className="secondary" type="submit">
-            Send
-          </button>
-        </span>
-      </form>
-      <article>
-        <p className="font-bold">your posts</p>
-      </article>
+      <hr />
+      <Crud />
     </section>
   );
 }

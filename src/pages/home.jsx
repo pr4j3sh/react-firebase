@@ -1,6 +1,31 @@
-import { Link } from "react-router-dom";
+import { onAuthStateChanged } from "firebase/auth";
+import { useEffect } from "react";
+import { Link, useNavigate } from "react-router-dom";
+import { auth } from "../lib/firebase";
+import { useDispatch } from "react-redux";
+import { setUser } from "../features/user/userSlice";
 
 export default function Home() {
+  const dispatch = useDispatch();
+  const navigate = useNavigate();
+
+  useEffect(() => {
+    onAuthStateChanged(auth, (user) => {
+      if (user) {
+        console.log(user);
+        dispatch(
+          setUser({
+            uid: user.uid,
+            displayName: user.displayName,
+            email: user.email,
+            accessToken: user.accessToken,
+          }),
+        );
+        navigate("/dashboard");
+      }
+    });
+  }, [dispatch, navigate]);
+
   return (
     <section className="container">
       <article>
@@ -8,7 +33,7 @@ export default function Home() {
         <p>
           This is a reactjs + firebase template, with react-router-dom,
           tailwindcss, oauth and email-password authentication, crud operations
-          with firebase firestore, redux state management.
+          with firebase firestore and redux-toolkit for state management.
         </p>
       </article>
       <article>
@@ -69,6 +94,14 @@ export default function Home() {
               target="_blank"
             >
               React Router Documentation
+            </a>
+          </li>
+          <li>
+            <a
+              href="https://redux-toolkit.js.org/introduction/getting-started"
+              target="_blank"
+            >
+              Redux Toolkit Documentation
             </a>
           </li>
           <li>
