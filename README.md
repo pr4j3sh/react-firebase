@@ -7,7 +7,7 @@ This is a reactjs + firebase template, with react-router-dom, tailwindcss, oauth
 - Use this template via `@pr4j3sh/frames` npm package:
 
 ```bash
-npm create @pr4j3sh/frames react-firebase myapp
+npm create @pr4j3sh/frames@latest react-firebase myapp
 ```
 
 > You can replace `myapp` with the desired name of your choice.
