@@ -1,12 +1,10 @@
 # React + Firebase
 
-> work in progress
-
 This is a reactjs + firebase template, with react-router-dom, tailwindcss, oauth and email-password authentication, crud operations with firebase firestore and redux-toolkit for state management.
 
 ## Getting Started
 
-Use this template via `@pr4j3sh/frames` npm package:
+- Use this template via `@pr4j3sh/frames` npm package:
 
 ```bash
 npm create @pr4j3sh/frames react-firebase myapp
@@ -14,9 +12,7 @@ npm create @pr4j3sh/frames react-firebase myapp
 
 > You can replace `myapp` with the desired name of your choice.
 
-### Environment Variables
-
-Make sure to initialize environment variables in the `.env` file:
+- Make sure to initialize environment variables in the `.env` file:
 
 ```plaintext
 VITE_FIREBASE_API_KEY=
@@ -27,10 +23,6 @@ VITE_FIREBASE_MESSAGING_SENDER_ID=
 VITE_FIREBASE_APP_ID=
 VITE_FIREBASE_MEASUREMENT_ID=
 ```
-
-## Getting Started with the App
-
-Once you have set up your project, you can navigate to the `/auth` route to begin authentication.
 
 ## Read More
 
