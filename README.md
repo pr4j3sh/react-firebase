@@ -24,6 +24,12 @@ VITE_FIREBASE_APP_ID=
 VITE_FIREBASE_MEASUREMENT_ID=
 ```
 
+- Run using `dev`:
+
+```bash
+npm run dev
+```
+
 ## Read More
 
 Here are some useful documentation links:
