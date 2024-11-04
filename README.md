@@ -30,6 +30,10 @@ VITE_FIREBASE_MEASUREMENT_ID=
 npm run dev
 ```
 
+## Deploy
+
+- Use [vercel](https://vercel.com/) for deployment.
+
 ## Read More
 
 Here are some useful documentation links:

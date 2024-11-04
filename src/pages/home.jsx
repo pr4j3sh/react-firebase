@@ -67,6 +67,15 @@ export default function Home() {
           VITE_FIREBASE_MEASUREMENT_ID=
         </pre>
       </article>
+      <article>
+        <p>
+          Use{" "}
+          <a href="https://vercel.com/" target="_blank">
+            vercel
+          </a>{" "}
+          for deployment.{" "}
+        </p>
+      </article>
       <div className="flex gap-2">
         <Link to="/auth">
           <button>Get started</button>
