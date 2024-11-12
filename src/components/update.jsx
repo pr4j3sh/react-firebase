@@ -46,9 +46,7 @@ export default function Update() {
           value={formData.text}
           onChange={handleChange}
         />
-        <button type="submit" className="secondary">
-          Update
-        </button>
+        <button type="submit">Update</button>
       </form>
     </>
   );

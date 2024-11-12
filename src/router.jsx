@@ -5,32 +5,44 @@ import Signin from "./pages/signin";
 import Signup from "./pages/signup";
 import Dashboard from "./pages/dashboard";
 import Protected from "./components/protected";
+import Root from "./layouts/root";
+import NotFound from "./pages/not-found";
 
 export const router = createBrowserRouter([
   {
     path: "/",
-    element: <Home />,
-  },
-  {
-    path: "auth",
-    element: <Auth />,
+    element: <Root />,
     children: [
       {
         index: true,
-        element: <Signin />,
+        element: <Home />,
       },
       {
-        path: "signup",
-        element: <Signup />,
+        path: "auth",
+        element: <Auth />,
+        children: [
+          {
+            index: true,
+            element: <Signin />,
+          },
+          {
+            path: "signup",
+            element: <Signup />,
+          },
+        ],
+      },
+      {
+        path: "dashboard",
+        element: (
+          <Protected>
+            <Dashboard />
+          </Protected>
+        ),
       },
     ],
   },
   {
-    path: "dashboard",
-    element: (
-      <Protected>
-        <Dashboard />
-      </Protected>
-    ),
+    path: "*",
+    element: <NotFound />,
   },
 ]);

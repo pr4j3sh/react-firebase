@@ -36,9 +36,7 @@ export default function Create() {
           value={formData.text}
           onChange={handleChange}
         />
-        <button type="submit" className="secondary">
-          Create
-        </button>
+        <button type="submit">Create</button>
       </form>
     </>
   );

@@ -36,7 +36,7 @@ export default function Delete() {
           value={formData.id}
           onChange={handleChange}
         />
-        <button type="submit" className="secondary">
+        <button type="submit" className="danger">
           Delete
         </button>
       </form>

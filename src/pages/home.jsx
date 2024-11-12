@@ -88,17 +88,18 @@ export default function Home() {
         <p className="font-bold">Read more</p>
         <ul>
           <li>
-            <a href="https://vite.dev/guide/" target="_blank">
+            <a className="link" href="https://vite.dev/guide/" target="_blank">
               Vite Documentation
             </a>
           </li>
           <li>
-            <a href="https://react.dev/" target="_blank">
+            <a className="link" href="https://react.dev/" target="_blank">
               ReactJs Documentation
             </a>
           </li>
           <li>
             <a
+              className="link"
               href="https://reactrouter.com/en/main/start/tutorial"
               target="_blank"
             >
@@ -107,6 +108,7 @@ export default function Home() {
           </li>
           <li>
             <a
+              className="link"
               href="https://redux-toolkit.js.org/introduction/getting-started"
               target="_blank"
             >
@@ -114,12 +116,17 @@ export default function Home() {
             </a>
           </li>
           <li>
-            <a href="https://firebase.google.com/docs/build" target="_blank">
+            <a
+              className="link"
+              href="https://firebase.google.com/docs/build"
+              target="_blank"
+            >
               Firebase Documentation
             </a>
           </li>
           <li>
             <a
+              className="link"
               href="https://tailwindcss.com/docs/utility-first"
               target="_blank"
             >
@@ -127,7 +134,11 @@ export default function Home() {
             </a>
           </li>
           <li>
-            <a href="https://github.com/pr4j3sh/frames/" target="_blank">
+            <a
+              className="link"
+              href="https://github.com/pr4j3sh/frames/"
+              target="_blank"
+            >
               @pr4j3sh/frames
             </a>
           </li>

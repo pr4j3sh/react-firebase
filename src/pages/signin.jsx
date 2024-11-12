@@ -64,9 +64,14 @@ export default function Signin() {
       </form>
       <section className="w-full md:w-1/2">
         <p>
-          Do not have an account? <Link to="/auth/signup">Sign Up</Link>{" "}
+          Do not have an account?{" "}
+          <Link className="link" to="/auth/signup">
+            Sign Up
+          </Link>{" "}
         </p>
-        <Link to="/">Go to home</Link>
+        <Link className="link" to="/">
+          Go home
+        </Link>
       </section>
     </section>
   );
