@@ -19,11 +19,11 @@ export default function Dashboard() {
   return (
     <section className="container">
       <article>
-        <p className="font-bold">Hey {user?.name || user?.email},</p>
+        <b>Hey {user?.name || user?.email},</b>
         <p>Welcome to your Dashboard. Create, read, update and delete data.</p>
       </article>
       <span>
-        <button className="secondary" onClick={handleLogout}>
+        <button className="danger" onClick={handleLogout}>
           Logout
         </button>
       </span>

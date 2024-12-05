@@ -29,7 +29,7 @@ export default function Home() {
   return (
     <section className="container">
       <article>
-        <p className="font-bold">Hey there,</p>
+        <b>Hey there,</b>
         <p>
           This is a reactjs + firebase template, with react-router-dom,
           tailwindcss, oauth and email-password authentication, crud operations
@@ -52,25 +52,25 @@ export default function Home() {
           <code>.env</code> file
         </p>
         <pre>
-          VITE_FIREBASE_API_KEY=
+          <code>VITE_FIREBASE_API_KEY=</code>
           <br />
-          VITE_FIREBASE_AUTH_DOMAIN=
+          <code>VITE_FIREBASE_AUTH_DOMAIN=</code>
           <br />
-          VITE_FIREBASE_PROJECT_ID=
+          <code>VITE_FIREBASE_PROJECT_ID=</code>
           <br />
-          VITE_FIREBASE_STORAGE_BUCKET=
+          <code>VITE_FIREBASE_STORAGE_BUCKET=</code>
           <br />
-          VITE_FIREBASE_MESSAGING_SENDER_ID=
+          <code>VITE_FIREBASE_MESSAGING_SENDER_ID=</code>
           <br />
-          VITE_FIREBASE_APP_ID=
+          <code>VITE_FIREBASE_APP_ID=</code>
           <br />
-          VITE_FIREBASE_MEASUREMENT_ID=
+          <code>VITE_FIREBASE_MEASUREMENT_ID=</code>
         </pre>
       </article>
       <article>
         <p>
           Use{" "}
-          <a href="https://vercel.com/" target="_blank">
+          <a className="link" href="https://vercel.com/" target="_blank">
             vercel
           </a>{" "}
           for deployment.{" "}

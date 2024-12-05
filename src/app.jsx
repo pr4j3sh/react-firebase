@@ -1,5 +1,5 @@
 import { RouterProvider } from "react-router-dom";
-import Head from "./components/Head";
+import Head from "./components/head";
 import { SITE } from "./lib/consts";
 import { router } from "./router";
 

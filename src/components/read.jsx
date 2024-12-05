@@ -21,7 +21,7 @@ export default function Read() {
 
   return (
     <>
-      <p className="font-bold">Read</p>
+      <h6>Read</h6>
       {texts.length > 0 ? (
         <table border="1">
           <thead>

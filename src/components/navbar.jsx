@@ -6,10 +6,8 @@ export default function Navbar({ site }) {
       <a href="/" className="font-semibold">
         {site?.REPO}
       </a>
-      <ul>
-        <li>
-          <ModeToggle />
-        </li>
+      <ul className="btns">
+        <ModeToggle />
       </ul>
     </nav>
   );

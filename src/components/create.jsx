@@ -27,7 +27,7 @@ export default function Create() {
 
   return (
     <>
-      <p className="font-bold">Create</p>
+      <h6>Create</h6>
       <form onSubmit={handleSubmit} method="post">
         <input
           type="text"

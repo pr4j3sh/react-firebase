@@ -37,14 +37,12 @@ export default function Signup() {
     }
   }
   return (
-    <section className="flex flex-col items-center gap-4">
-      <section className="w-full md:w-1/2">
-        <p className=" font-bold">Create a new account.</p>
-      </section>
-      <section className="w-full md:w-1/2 flex flex-col gap-2">
+    <section>
+      <section>
+        <b>Create a new account.</b>
         <WithGoogle />
       </section>
-      <hr className="w-full md:w-1/2" />
+      <hr />
       <form method="post" onSubmit={handleSubmit}>
         <input
           type="text"
@@ -62,7 +60,7 @@ export default function Signup() {
         />
         <button type="submit">Sign Up</button>
       </form>
-      <section className="w-full md:w-1/2">
+      <section>
         <p>
           Already have an account?{" "}
           <Link className="link" to="/auth">

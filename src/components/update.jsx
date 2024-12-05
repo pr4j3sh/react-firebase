@@ -30,7 +30,7 @@ export default function Update() {
 
   return (
     <>
-      <p className="font-bold">Update</p>
+      <h6>Update</h6>
       <form onSubmit={handleSubmit} method="post">
         <input
           type="text"

@@ -27,7 +27,7 @@ export default function Delete() {
 
   return (
     <>
-      <p className="font-bold">Delete</p>
+      <h6>Delete</h6>
       <form onSubmit={handleSubmit} method="post">
         <input
           type="text"
