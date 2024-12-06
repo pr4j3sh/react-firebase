@@ -135,7 +135,16 @@ export default function Home() {
           <li>
             <a
               className="link"
-              href="https://github.com/pr4j3sh/frames/"
+              href="https://pr4j3sh.github.io/ui/"
+              target="_blank"
+            >
+              frames UI
+            </a>
+          </li>
+          <li>
+            <a
+              className="link"
+              href="https://pr4j3sh.github.io/frames/"
               target="_blank"
             >
               @pr4j3sh/frames

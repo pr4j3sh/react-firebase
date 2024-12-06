@@ -44,4 +44,5 @@ Here are some useful documentation links:
 - [Redux Toolkit Documentation](https://redux-toolkit.js.org/introduction/getting-started)
 - [Firebase Documentation](https://firebase.google.com/docs/build)
 - [TailwindCSS Documentation](https://tailwindcss.com/docs/utility-first)
-- [@pr4j3sh/frames GitHub](https://github.com/pr4j3sh/frames/)
+- [frames UI](https://pr4j3sh.github.io/ui/)
+- [@pr4j3sh/frames](https://pr4j3sh.github.io/frames/)
