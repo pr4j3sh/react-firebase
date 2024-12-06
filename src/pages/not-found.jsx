@@ -4,7 +4,7 @@ import Footer from "../components/footer";
 
 export default function NotFound() {
   return (
-    <div className="container">
+    <div>
       <Navbar />
       <main>
         <article className="card">

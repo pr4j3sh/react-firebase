@@ -12,7 +12,6 @@ export default function Home() {
   useEffect(() => {
     onAuthStateChanged(auth, (user) => {
       if (user) {
-        console.log(user);
         dispatch(
           setUser({
             uid: user.uid,
@@ -27,7 +26,7 @@ export default function Home() {
   }, [dispatch, navigate]);
 
   return (
-    <section className="container">
+    <section>
       <article>
         <b>Hey there,</b>
         <p>

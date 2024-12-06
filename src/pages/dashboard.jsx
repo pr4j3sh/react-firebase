@@ -17,7 +17,7 @@ export default function Dashboard() {
     }
   }
   return (
-    <section className="container">
+    <section>
       <article>
         <b>Hey {user?.name || user?.email},</b>
         <p>Welcome to your Dashboard. Create, read, update and delete data.</p>
